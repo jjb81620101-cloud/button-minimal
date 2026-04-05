@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>按鈕設計</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f23;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    /* Primary */
+    .btn-primary {
+      background: #fff;
+      color: #0f0f23;
+    }
+    .btn-primary:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    /* Outline */
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    .btn-outline:hover {
+      background: #fff;
+      color: #0f0f23;
+    }
+
+    /* Ghost */
+    .btn-ghost {
+      background: transparent;
+      color: #888;
+    }
+    .btn-ghost:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* Pill */
+    .btn-pill {
+      background: #fff;
+      color: #0f0f23;
+      border-radius: 50px;
+    }
+    .btn-pill:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    /* Sizes */
+    .btn-sm { padding: 10px 20px; font-size: 0.875rem; }
+    .btn-lg { padding: 18px 36px; font-size: 1.125rem; }
+
+    @media (max-width: 480px) {
+      .button-row { flex-direction: column; width: 100%; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>按鈕設計</h1>
+  
+  <div class="button-row">
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-outline">Outline</button>
+    <button class="btn btn-ghost">Ghost</button>
+    <button class="btn btn-pill">Pill</button>
+  </div>
+
+  <div class="button-row">
+    <button class="btn btn-primary btn-sm">Small</button>
+    <button class="btn btn-primary">Default</button>
+    <button class="btn btn-primary btn-lg">Large</button>
+  </div>
+</body>
+</html>
